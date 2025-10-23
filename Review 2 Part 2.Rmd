@@ -1,0 +1,136 @@
+---
+title: "Review 1 Part 2"
+output: pdf_document
+date: "2025-09-17"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Instructions
+
+This is the second part of your review. You are allowed to use all the materials listed as part of the overall review instructions.
+
+In the case that you have trouble compiling the PDF file, please submit the RMD file. For problems that have multiple parts, I will award partial credit where appropriate.
+
+(**Note:** If you have trouble seeing equations, make sure you use the visual mode or cross reference the PDF).
+
+Before you start, run the following code chunk to set everything up:
+
+```{r, message=FALSE}
+library(tidyverse)
+if (!require(DescTools)) {
+  install.packages("DescTools")
+}
+set.seed(105)
+```
+
+**Your name**:
+
+\newpage
+
+# Law of Large Numbers
+
+In class, we talked about the law of large numbers and the properties of the sample mean. In this section, let's perform some simulations to verify the identities we saw in class numerically.
+
+## Question 1
+
+Suppose $X \sim BIN(40, 0.7)$, which is a binomial distribution. Sample 100 numbers from the distribution and call it `x`.
+
+```{r}
+## Your code here
+
+```
+
+## Question 2
+
+Find the sample mean and standard deviation of `x`.
+
+```{r}
+## Your code here
+
+```
+
+## Question 3
+
+Are the values you found in Question 2 close to what you expect? Make sure you mention the exact values from the distribution.
+
+**Your answer**:
+
+## Question 4
+
+Now, find the mean for `x`, but for samples sizes of 5, 50, and 500. (You need to sample again. You can do these three steps separately, but you are welcomed to use a `for` loop if you are comfortable with it. Also, the sample size refers to how many you sample, not the parameter of the binomial distribution.)
+
+```{r}
+## Your code here
+
+```
+
+## Question 5
+
+Is the sample mean more accurate when you increase the sample size? Explain using the actual values you found in Question 4.
+
+**Your answer**:
+
+## Question 6
+
+Now, you remembered that we also learned about the median. Find the population median from the distribution using the Inverse CDF, not your samples. (Hint: Remember the quantile of the median).
+
+```{r}
+## Your code here
+
+```
+
+## Question 7
+
+Is the median you found in **Question 6** close to the mean of the distribution? What does this say about the shape of the distribution?
+
+**Your answer**:
+
+\newpage
+
+# Real Data Analysis
+
+Consider the food access dataset again. This time, the dataset has been preprocessed with only census tracts from Texas and a random sample has been taken. This dataset is named as `review2_data.csv` in the Review 2 folder. The corresponding data dictionary is included as well.
+
+Note: Don't use the previous full dataset we used in class because you will get different results.
+
+## Question 8
+
+Load the dataset into R and name it `food`. (Remember to put the dataset in the same folder as your R Markdown file and double check the name of the file for an exact match.)
+
+```{r}
+## Your code here
+
+```
+
+## Question 9
+
+Notice that the column `LILATracts_Vehicle` is binary, which means that this is a proportion problem. In this case, find a 99% confidence interval for the proportion.
+
+```{r}
+## Your code here
+
+```
+
+## Question 10
+
+Write a conclusion for Question 9. Make sure you include the context of the problem about the parameter rather than using generic languages.
+
+**Your answer**:
+
+## Question 11
+
+Suppose that you are interested in the average Occupied Housing Units (`OHU2010`) per census tract. Find a 99% confidence interval using R.
+
+```{r}
+## Your code here
+
+```
+
+## Question 12
+
+Write a conclusion for Question 11. Make sure you include the context of the problem about the parameter rather than using generic languages.
+
+**Your answer**:

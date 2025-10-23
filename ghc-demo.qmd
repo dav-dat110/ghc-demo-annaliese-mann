@@ -1,0 +1,94 @@
+---
+title: GHC Demo Assignment
+subtitle: CSC 110 - Fall 2025
+author: Annaliese Mann
+format: 
+  html: 
+    theme: 
+      light: flatly
+      dark: darkly
+    toc: true 
+    toc-depth: 3
+    toc-location: left
+    revealjs: 
+      output-file: document-revealjs.html
+---
+
+```{r setup}
+#| label: load-packages
+#| echo: true
+#| include: true
+#| warning: false
+
+library(tidyverse)
+
+```
+
+# Homework
+
+```{r}
+#| fig-cap: Fuel mileage scatterplot
+ggplot(
+  mpg, 
+  aes(
+    x = displ,
+    y = hwy
+    )) + geom_point() +
+  labs(
+    title = "Impact of Vehicle Engine Size on Highway Fuel Mileage", 
+    x = "Vehicle Engine Size (displacement)",
+    y = "Highway Fuel Mileage"
+  )
+```
+
+### <https://www.davidson.edu>
+
+-   Urban Economics
+
+-   Introduction to Statistics
+
+-   American Foreign Politics
+
+1.  The Office
+2.  Breaking Bad
+3.  Parks and Recreation
+
+Here is the footnote reference, [^1].
+
+[^1]: Here is the footnote.
+
+# $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+> Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+::: callout-note
+note
+:::
+
+::: callout-tip
+tip
+:::
+
+::: {.callout-important collapse="true"}
+important
+:::
+
+{{< pagebreak >}}
+
+# Reflection
+
+The variety of techniques learned in this lab will be highly beneficial to the outline of our final project.
+
+First, `unordered and ordered lists` will be useful in creating **organized** information within our project. Bullet point lists and numbered lists can structure our data explanations into succinct points making them easy to follow and understandable to our readers. We can use these techniques to present our ideas in **logical order** or by its rank of importance.
+
+Next, the`footnotes` technique will be extremely advantageous for our research project as we need to cite our sources. Including footnotes allow for **in-text citations** to remain clean and uncluttered, improving the **readability** of our explanations. Footnotes are crucial in research projects for referencing additional information without breaking the flow of the paper.
+
+Finally, `callout blocks` will be helpful in allowing information to stand out. In our final project, we can use this notation to **emphasize key definitions** or codes for readers to easily visualize. We can use these to include important notes or tips to emphasize insights outside of our data visualizations and analyses.
